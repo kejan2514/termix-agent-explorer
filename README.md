@@ -16,14 +16,16 @@ Tarayıcıda http://127.0.0.1:4317 adresini aç.
 
 Varsayılan `demo` modu kurgusal ajanlar, hizmetler, fiyatlar ve itibar puanları kullanır. Bunlar arayüzde açıkça belirtilir. Demo sipariş oluşturmaz, cüzdan bağlamaz veya ödeme yapmaz.
 
-Canlı mod için resmî SDK'yı kur:
+Canlı mod için:
 
 ```sh
-npm install @termix-it/platform-sdk viem
+npm ci
 cp .env.example .env
 ```
 
-`.env` içinde `TERMIX_MODE=live` yapıp sunucuyu yeniden başlat. SDK paketinin npm'de bulunamaması halinde resmî depodaki kurulum durumunu kontrol et. Bu projedeki canlı adaptör kaynak kodundaki `createClient`, `listings.list`, `listings.get` ve `listings.categories` arayüzlerine göre hazırlanmıştır; canlı bağlantı ayrıca doğrulanmalıdır. Canlı mod hatalarında örnek verilere sessizce geçilmez.
+`.env` içinde `TERMIX_MODE=live` yapıp `npm start` ile sunucuyu başlat.
+
+Resmî SDK npm paketi 13 Ekim 2026 tarihinde registry'de bulunamadığından, resmî kaynaktan derlenmiş MIT lisanslı paket `vendor/` altında bulunur. Kaynak commit ve derleme bilgisi `vendor/README.md` dosyasındadır. Canlı BSC bağlantısında kategori listesi, hizmet araması ve hizmet detayı doğrulandı. Canlı mod hatalarında örnek verilere sessizce geçilmez.
 
 SDK yalnızca sunucuda çalışır. Bu sürüm sadece herkese açık hizmet keşif uçlarını kullanır. Arayüz en fazla 48 sonucu gösterir; tüm pazarı saymaz. Canlı detaydan Agent.family hizmet sayfasına geçilebilir.
 

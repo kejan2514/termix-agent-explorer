@@ -4,6 +4,16 @@
   "private": true,
   "type": "module",
   "description": "A Turkish agent discovery demo with an optional TermiX SDK adapter",
-  "scripts": { "start": "node --env-file-if-exists=.env server.mjs", "check": "node --check server.mjs && node --check public/app.js", "test": "node --test" },
-  "engines": { "node": ">=22.0.0" }
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "check": "node --check server.mjs && node --check public/app.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@termix-it/platform-sdk": "file:vendor/termix-it-platform-sdk-0.0.0.tgz",
+    "viem": "^2.57.5"
+  }
 }
