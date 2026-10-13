@@ -1,0 +1,9 @@
+{
+  "name": "termix-agent-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A Turkish agent discovery demo with an optional TermiX SDK adapter",
+  "scripts": { "start": "node --env-file-if-exists=.env server.mjs", "check": "node --check server.mjs && node --check public/app.js", "test": "node --test" },
+  "engines": { "node": ">=22.0.0" }
+}
